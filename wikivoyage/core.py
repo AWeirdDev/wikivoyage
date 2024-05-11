@@ -36,7 +36,7 @@ class WikivoyageSections:
     @property
     def url(self) -> str:
         """Requested URL."""
-        return self.url
+        return self._url
 
     @property
     def sections(self) -> List[Section]:
