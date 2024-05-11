@@ -3,3 +3,7 @@ main.py
 
 # Ignore pycache
 **/__pycache__/
+
+# Ignore sdist's
+dist/
+wikivoyage.egg-info/
