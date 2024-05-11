@@ -43,7 +43,7 @@ Super simple.
 
 ## Why?
 
-I'm initially a "i aint reading allat" person, thus I made this project so I can better categorize all the sections from a Wikivoyage page, feed it to an LLM and summarize it for me.
+I'm initially an "i-aint-reading-allat" person, thus I made this project so I can better categorize all the sections from a Wikivoyage page, feed it to an LLM and summarize it for me.
 
 Check out [where-next](https://github.com/AWeirdDev/where-next), a Next.JS project created by me to learn more.
 
@@ -85,3 +85,11 @@ class Section:
     title: str  # The title. Alias: `section`
     content: str  # The content. Alias: `markdown`
 ```
+
+## Contributing
+
+Contributions are welcome! And yes, I'm not really familiar with GitHub so please help me.
+
+## License
+
+MIT License.
