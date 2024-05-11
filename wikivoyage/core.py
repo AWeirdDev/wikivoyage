@@ -16,7 +16,7 @@ Try it yourself.
 
 from __future__ import annotations
 
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import requests
 from selectolax.parser import HTMLParser as Parser, Node
@@ -187,3 +187,27 @@ def get(url: str, **requests_kwargs) -> WikivoyageSections:
 
     drop()
     return WikivoyageSections(url=url, sections=sections)
+
+def search(query: str, **requests_kwargs) -> List[Tuple[str, str]]:
+    """Search Wikivoyage pages, limited to 10 results.
+    
+    Args:
+        query (str): The query.
+        **requests_kwargs: Keyword-only arguments for `requests.get`.
+    
+    Returns:
+        List[Tuple[str, str]]: Returns a list of ``(title, link)``'s.
+    """
+    r = requests.get(
+        "https://en.wikivoyage.org/w/api.php",
+        params={
+            "action": "opensearch",
+            "format": "json",
+            "formatversion": "2",
+            "search": query,
+            "namespace": "0",
+            "limit": 10
+        }
+    )
+    data = r.json()
+    return list(zip(data[1], data[3]))

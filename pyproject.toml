@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "wikivoyage"
-version = "0.1"
+version = "0.2"
 description = "Consume Wikivoyage pages into pure (elegant) Markdown. Probably."
 keywords = ["wikivoyage", "wikipedia", "wiki", "requests", "info", "markdown", "selectolax", "parser"]
 authors = [
